@@ -7,6 +7,7 @@
   <groupId>cn.exiafor</groupId>
   <artifactId>ssm</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
 
   <properties>
     <spring.version>6.0.6</spring.version>
@@ -29,11 +30,11 @@
 
   <dependencies>
     <!--spring pom.xml依赖-->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-context</artifactId>-->
+<!--      <version>${spring.version}</version>-->
+<!--    </dependency>-->
 
     <dependency>
       <groupId>jakarta.annotation</groupId>
