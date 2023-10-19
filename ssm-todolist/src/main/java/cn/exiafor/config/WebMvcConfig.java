@@ -6,10 +6,11 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"cn.exiafor.controller", "cn.exiafor.exceptionhandler"})
+@ComponentScan({"cn.exiafor.controller"})
 public class WebMvcConfig implements WebMvcConfigurer {
     // 静态资源处理器
     @Override
@@ -17,9 +18,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         configurer.enable();
     }
 
-    // jsp视图解析器
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
-        registry.jsp("/WEB-INF/views/", "jsp");
+        registry.viewResolver(new InternalResourceViewResolver("static/", ".html"));
     }
 }
